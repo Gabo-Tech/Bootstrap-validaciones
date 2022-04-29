@@ -7,6 +7,7 @@ const getPass1=document.querySelector('#password')
 const getPass2=document.querySelector('#password2')
 const btn=document.querySelector('#form')
 // console.log(btn)
+const containerUsers=document.querySelector('#all-users')
 
 
 let users =[]
@@ -29,6 +30,12 @@ function getUser(e){
     console.log(`Nuevo usuario — Nombre: ${userFields.name}, correo:${userFields.email}`)
     users.push(userFields);
     console.log("Usuarios recogidos",users)
+
+
+
+    // me he quedado aqui y falta imprimir cosas
+//     userList.innerHTML = ``;
+//   printUsers()
 
 }
 
