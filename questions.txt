@@ -1,21 +1,21 @@
 1.Parte 1. Investigación
 ———————————————————————————
-1.Crea una presentación de bootstrap que solvente las siguientes cuestiones:
-2.¿Qué es Bootstrap?¿Para qué sirve?
-3.¿Por qué usar Bootstrap?
-4.Características de Bootstrap
-5.Ventajas y desventajas de usar bootstrap
-6.Como instalar o implementar bootstrap en mi proyecto
-7.¿Se puede implementar responsive con Bootstrap? Si es asi podrías explicar como funciona y poner un ejemplo
-8.¿Que es un componente de bootstrap?Pon un ejemplo
-9.¿Hay muchos tipos de diseños en Bootstrap? Si los hay, explícalos
-10.¿Cuáles son los diferentes tipos de botones en bootstrap? Pon ejemplos.
-11.¿Que es un Carousel de bootstrap? Pon un ejemplo
-12.¿Que es un spinner de bootstrap? Pon un ejemplo
-13.¿Que es un navBar de bootstrap? Pon un ejemplo
-14.¿Que es un modal de bootstrap? Pon un ejemplo
-15.Existen inputs para subir archivos en Bootstrap? Pon un ejemplo
-16.¿Qué es un plugin scrollspy en Bootstrap?Pon un ejemplo
+Crea una presentación de bootstrap que solvente las siguientes cuestiones:
+1.¿Qué es Bootstrap?¿Para qué sirve?
+2.¿Por qué usar Bootstrap?
+3.Características de Bootstrap
+4.Ventajas y desventajas de usar bootstrap
+5.Como instalar o implementar bootstrap en mi proyecto
+6.¿Se puede implementar responsive con Bootstrap? Si es asi podrías explicar como funciona y poner un ejemplo
+7.¿Que es un componente de bootstrap?Pon un ejemplo
+8.¿Hay muchos tipos de diseños en Bootstrap? Si los hay, explícalos
+9.¿Cuáles son los diferentes tipos de botones en bootstrap? Pon ejemplos.
+10.¿Que es un Carousel de bootstrap? Pon un ejemplo
+11.¿Que es un spinner de bootstrap? Pon un ejemplo
+12.¿Que es un navBar de bootstrap? Pon un ejemplo
+13.¿Que es un modal de bootstrap? Pon un ejemplo
+14.Existen inputs para subir archivos en Bootstrap? Pon un ejemplo
+15.¿Qué es un plugin scrollspy en Bootstrap?Pon un ejemplo
 Extra
 —————————
 Implementa nuevos puntos sobre bootstrap que hayas descubierto durante tu investigación y creas que son importantes
