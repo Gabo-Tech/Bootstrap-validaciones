@@ -96,8 +96,8 @@ Implementa una validación que comprueba que la contraseña 1 es la misma que la
 Implementa una validación de contraseña HECHO
 
 Por cada validación que no se cumpla muestra un mensaje durante 3 segundos y que después desaparezca   HECHO
-Al terminar de rellenar los datos del formulario correctamente muestra un mensaje durante 3 segundos que muestre “Usuario creado correctamente” y redirige a la vista Usuarios.
-Muestra los mensajes utilizando los alerts de bootstrap
+Al terminar de rellenar los datos del formulario correctamente muestra un mensaje durante 3 segundos que muestre “Usuario creado correctamente” y redirige a la vista Usuarios. HECHO
+Muestra los mensajes utilizando los alerts de bootstrap HECHO
 Crea la vista Usuarios la cual debe mostrar en cards de bootstrap los usuarios guardados en localStorage con los siguientes campos:
 Nombre
 Correo
