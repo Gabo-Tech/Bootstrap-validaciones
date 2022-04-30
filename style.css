@@ -118,3 +118,8 @@ body {
 .form-group small {
     color: var(--error-color);
 }
+
+#form-success, #name-alert-empty, #name-alert-wrong, #email-alert-empty, #email-alert-wrong, #password-alert-empty, #password-alert-wrong, #password2-alert-empty , #password2-alert-wrong {
+	display: none;
+	z-index: 2;
+}
