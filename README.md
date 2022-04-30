@@ -74,7 +74,7 @@ Scrollspy es un plugin que actualiza automáticamente los enlaces en una lista d
 *Extra
 Implementa nuevos puntos sobre bootstrap que hayas descubierto durante tu investigación y creas que son importantes
 
-hay que saber usarlo pero con cuidado sin pasarse si no se queda un web standar sin personalidad y sin personalizar
+Hay que saber usarlo pero con cuidado sin pasarse si no se queda un web standar sin personalidad y sin personalizar
 
 
  
