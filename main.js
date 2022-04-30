@@ -27,9 +27,10 @@ function getUser(e){
         password2: getPass2.value
       };
 
-    console.log(`Nuevo usuario — Nombre: ${userFields.name}, correo:${userFields.email}`)
+    console.log(`Nuevo usuario — Nombre: ${userFields.name}, correo:${userFields.email}`);
     users.push(userFields);
-    console.log("Usuarios recogidos",users)
+    localStorage.setItem("users", JSON.stringify(users));//Línea añadida para guardarlo en localStorage
+    console.log("Usuarios recogidos", users);
 
 
 
@@ -37,7 +38,7 @@ function getUser(e){
 //     userList.innerHTML = ``;
 //   printUsers()
 
-}
+};
 
 
 
@@ -61,7 +62,7 @@ const isEmailValid = (email) => {
 //Función para comprobar la contraseña.
 const isPasswordSecure = (password) => {
   //                    Regex comprobando que la contraseña tenga minusculas, mayusculas, números, lista de caractéres especiales y entre 8 y 100 caractéres
-  const re = new RegExp("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8, 100})");
+  const re = new RegExp("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})");
   return re.test(password);
 };
 
@@ -79,7 +80,7 @@ const showError = (input, message) => {
   error.textContent = message;
 };
 const showSuccess = (input) => {
-  // Obtener el elemento del formiulario
+  // Obtener el elemento del formulario
   const formField = input.parentElement;
   // eliminar la clase del error
   formField.classList.remove('error');
@@ -127,12 +128,18 @@ const checkEmail = () => {
 const checkPassword = () => {
   let valid = false;
   const password = getPass1.value.trim();
+  console.log(password);
   if (!isRequired(password)) {
+    console.log("Password 1 "+password);
       showError(getPass1, 'Password cannot be blank.');
+      console.log("Password 2 "+password);
   } else if (!isPasswordSecure(password)) {
-      showError(getPass1, 'Password must has at least 8 characters that include at least 1 lowercase character, 1 uppercase characters, 1 number, and 1 special character in (!@#$%^&*)');
+    console.log("Password 3 "+password);
+      showError(getPass1, 'Password must have at least 8 characters that include at least 1 lowercase character, 1 uppercase characters, 1 number, and 1 special character in (!@#$%^&*)');
   } else {
+    console.log("Password 4 "+password);
       showSuccess(getPass1);
+      console.log("Password 5 "+password);
       valid = true;
   }
   return valid;
@@ -169,7 +176,7 @@ btn.addEventListener('submit', function (e) {
       isConfirmPasswordValid;
   // acciones a tomar una vez la información validada (enviar la información a la otroa página y mostrarla  en pantalla)
   if (isFormValid) {
-    getUser();//En este caso la función a realizar es guardar la información del usuario en la array de usuarios 
+    getUser(e);//En este caso la función a realizar es guardar la información del usuario en la array de usuarios  
   }
 });
 
