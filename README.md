@@ -10,7 +10,7 @@ Para desarrollar sitios web responsivos y móviles.
 
 ¿Por qué usar Bootstrap? 
 
-Para desarrollar sitios web responsivos y móviles.
+Por vago //Para desarrollar sitios web responsivos y móviles.
 
 
 Características de Bootstrap 
