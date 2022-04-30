@@ -169,7 +169,7 @@ btn.addEventListener('submit', function (e) {
       isConfirmPasswordValid;
   // acciones a tomar una vez la información validada (enviar la información a la otroa página y mostrarla  en pantalla)
   if (isFormValid) {
-    //escriba aquí su código 
+    getUser();//En este caso la función a realizar es guardar la información del usuario en la array de usuarios 
   }
 });
 
