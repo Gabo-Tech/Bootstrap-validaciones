@@ -14,7 +14,7 @@ let users =[]
 
 // evento para recoger informacion
 
-btn.addEventListener('submit', getUser);
+//btn.addEventListener('submit', getUser); Añadido en la función de validar toda la información para guardar los datos ya validados.
 
 // funcion para coger datos
 function getUser(e){
