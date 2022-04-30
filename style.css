@@ -1,3 +1,8 @@
+:root {
+    --error-color: #dc3545;
+    --success-color: #28a745;
+}
+
 body {
 	color: #999;
 	background: #e2e2e2;
@@ -74,4 +79,51 @@ body {
 }
 .signup-form a:hover {
 	text-decoration: underline;
+}
+
+.form-group {
+    margin-bottom: 5px;
+
+}
+
+.form-group label {
+    display: block;
+    color: #777;
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    border: solid 2px #f0f0f0;
+    border-radius: 3px;
+    padding: 10px;
+    margin-bottom: 5px;
+    font-size: 14px;
+    display: block;
+    width: 100%;
+}
+
+.form-group input:focus {
+    outline: none;
+}
+
+.form-group.error input {
+    border-color: var(--error-color);
+}
+
+.form-group.success input {
+    border-color: var(--success-color);
+}
+
+
+.form-group small {
+    color: var(--error-color);
+}
+
+#form-success, #name-alert-empty, #name-alert-wrong, #email-alert-empty, #email-alert-wrong, #password-alert-empty, #password-alert-wrong, #password2-alert-empty , #password2-alert-wrong {
+	display: none;
+	z-index: 2;
+}
+
+.card{
+    margin-top: 1rem;
 }

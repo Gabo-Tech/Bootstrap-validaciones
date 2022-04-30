@@ -9,6 +9,20 @@ const btn=document.querySelector('#form')
 // console.log(btn)
 const containerUsers=document.querySelector('#all-users')
 
+//Constantes para recoger los mensajes de error con bootstrap
+const blankName = document.getElementById('name-alert-empty');
+const wrongName = document.getElementById('name-alert-wrong');
+const blankEmail = document.getElementById('email-alert-empty');
+const wrongEmail = document.getElementById('email-alert-wrong');
+const blankPassword = document.getElementById('password-alert-empty');
+const wrongPassword = document.getElementById('password-alert-wrong');
+const blankPassword2 = document.getElementById('password2-alert-empty');
+const wrongPassword2 = document.getElementById('password2-alert-wrong');
+
+//Constante para coger el mensage de guardado con exito
+const signUpSuccesful = document.getElementById('form-success');
+
+//Array para almacenar toda la info de los usuarios o array de usuarios. 
 let users =[]
 
 // evento para recoger informacion
@@ -26,19 +40,41 @@ function getUser(e){
         password2: getPass2.value
       };
 
-    console.log(`Nuevo usuario — Nombre: ${userFields.name}, correo:${userFields.email}`)
+    console.log(`Nuevo usuario — Nombre: ${userFields.name}, correo:${userFields.email}`);
     users.push(userFields);
-    console.log("Usuarios recogidos",users)
+    localStorage.setItem("users", JSON.stringify(users));
+    //Línea añadida para guardarlo en localStorage
+    console.log("Usuarios recogidos", users);
 
+    containerUsers.innerHTML = ``;
+    printUsers()
 
+};
 
-    // me he quedado aqui y falta imprimir cosas
-//     userList.innerHTML = ``;
-//   printUsers()
-
+function printUsers(){
+    console.log("holi caracoli")
+    let dataUser = JSON.parse(localStorage.getItem("users"));
+    console.log(dataUser)
+   
+  
+//   for(let i = 0; i < infoUser.length; i++){
+  
+//     containerUsers.innerHTML+= `
+                        
+//                         <div class="card">
+//                           <div class="card-body">
+//                             <h5 class="card-title"> 
+//                                 ${infoUser[i].name}</h5>
+//                             <p class="card-text">
+//                                 ${infoUser[i].email}
+//                             </p>
+//                           </div>
+//                         </div>
+//                           `
+                          
+                
+//   }
 }
-
-
 
 
 //Validación de la información del formulario.
@@ -60,9 +96,12 @@ const isEmailValid = (email) => {
 //Función para comprobar la contraseña.
 const isPasswordSecure = (password) => {
   //                    Regex comprobando que la contraseña tenga minusculas, mayusculas, números, lista de caractéres especiales y entre 8 y 100 caractéres
-  const re = new RegExp("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8, 100})");
+  const re = new RegExp("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})");
   return re.test(password);
 };
+
+//Función para cambiar la visibilidad de los elementos. 
+const showAndHide = (element) => element.style.display == 'block' ? element.style.display = 'none' : element.style.display = 'block';
 
 //Funciones de feedback, estas funciones 
 //añaden una clase de css (todavía por defniir con boostrap) 
@@ -78,7 +117,7 @@ const showError = (input, message) => {
   error.textContent = message;
 };
 const showSuccess = (input) => {
-  // Obtener el elemento del formiulario
+  // Obtener el elemento del formulario
   const formField = input.parentElement;
   // eliminar la clase del error
   formField.classList.remove('error');
@@ -95,9 +134,15 @@ const checkUsername = () => {
       max = 10;
   const username = getName.value.trim();
   if (!isRequired(username)) {
-      showError(getName, 'Name cannot be blank.');
+      //showError(getName, 'Name cannot be blank.');
+      showAndHide(blankName);
+      setTimeout(function() {showAndHide(blankName)}, 3000);
+      console.log("this is blank name inside checkusername function"+blankName);
   } else if (!isBetween(username.length, min, max)) {
-      showError(getName, `Name must be between ${min} and ${max} characters.`)
+      //showError(getName, `Name must be between ${min} and ${max} characters`);
+      showAndHide(wrongName);
+      setTimeout(function() {showAndHide(wrongName)}, 3000);
+      console.log("this is wrong name inside checkusername function"+wrongName);
   } else {
       showSuccess(getName);
       valid = true;
@@ -112,9 +157,13 @@ const checkEmail = () => {
   let valid = false;
   const email = getEmail.value.trim();
   if (!isRequired(email)) {
-      showError(getEmail, 'Email cannot be blank.');
+      //showError(getEmail, 'Email cannot be blank.');
+      showAndHide(blankEmail);
+      setTimeout(function() {showAndHide(blankEmail)}, 3000);
   } else if (!isEmailValid(email)) {
-      showError(getEmail, 'Email is not valid.')
+      //showError(getEmail, 'Email is not valid.');
+      showAndHide(wrongEmail);
+      setTimeout(function() {showAndHide(wrongEmail)}, 3000);
   } else {
       showSuccess(getEmail);
       valid = true;
@@ -127,11 +176,16 @@ const checkPassword = () => {
   let valid = false;
   const password = getPass1.value.trim();
   if (!isRequired(password)) {
-      showError(getPass1, 'Password cannot be blank.');
+      //showError(getPass1, 'Password cannot be blank.');
+      showAndHide(blankPassword);
+      setTimeout(function() {showAndHide(blankPassword)}, 3000);
   } else if (!isPasswordSecure(password)) {
-      showError(getPass1, 'Password must has at least 8 characters that include at least 1 lowercase character, 1 uppercase characters, 1 number, and 1 special character in (!@#$%^&*)');
+      //showError(getPass1, 'Password must have at least 8 characters that include at least 1 lowercase character, 1 uppercase characters, 1 number, and 1 special character in (!@#$%^&*)');
+      showAndHide(wrongPassword);
+      setTimeout(function() {showAndHide(wrongPassword)}, 3000);
   } else {
       showSuccess(getPass1);
+      
       valid = true;
   }
   return valid;
@@ -144,9 +198,13 @@ const checkConfirmPassword = () => {
   const confirmPassword = getPass2.value.trim();
   const password = getPass1.value.trim();
   if (!isRequired(confirmPassword)) {
-      showError(getPass2, 'Please enter the password again');
+      //showError(getPass2, 'Please enter the password again');
+      showAndHide(blankPassword2);
+      setTimeout(function() {showAndHide(blankPassword2)}, 3000);
   } else if (password !== confirmPassword) {
-      showError(getPass2, 'Passwords do not match');
+      //showError(getPass2, 'Passwords do not match');
+      showAndHide(wrongPassword2);
+      setTimeout(function() {showAndHide(wrongPassword2)}, 3000);
   } else {
       showSuccess(getPass2);
       valid = true;
@@ -168,7 +226,10 @@ btn.addEventListener('submit', function (e) {
       isConfirmPasswordValid;
   // acciones a tomar una vez la información validada (enviar la información a la otroa página y mostrarla  en pantalla)
   if (isFormValid) {
-    getUser();//En este caso la función a realizar es guardar la información del usuario en la array de usuarios 
+    getUser(e);//En este caso la función a realizar es guardar la información del usuario en la array de usuarios
+    showAndHide(signUpSuccesful);  
+    setTimeout(function() {showAndHide(signUpSuccesful)}, 3000);
+    window.location.assign("http://127.0.0.1:5500/usuarios.html");
   }
 });
 
