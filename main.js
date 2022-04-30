@@ -9,7 +9,6 @@ const btn=document.querySelector('#form')
 // console.log(btn)
 const containerUsers=document.querySelector('#all-users')
 
-
 let users =[]
 
 // evento para recoger informacion
