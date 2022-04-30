@@ -123,3 +123,7 @@ body {
 	display: none;
 	z-index: 2;
 }
+
+.card{
+    margin-top: 1rem;
+}
