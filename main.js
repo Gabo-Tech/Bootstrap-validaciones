@@ -208,6 +208,7 @@ btn.addEventListener('submit', function (e) {
     getUser(e);//En este caso la función a realizar es guardar la información del usuario en la array de usuarios
     showAndHide(signUpSuccesful);  
     setTimeout(function() {showAndHide(signUpSuccesful)}, 3000);
+    window.location.assign("http://127.0.0.1:5500/usuarios.html");
   }
 });
 
