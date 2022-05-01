@@ -1,7 +1,7 @@
-# Investigación Bootstrap
+# Investigación Bootstrap 🎉
 <center><img src="https://anthoncode.com/wp-content/uploads/2019/01/bootstrap-logo-png.png" alt="Kitten"  margin =auto width=auto height="200" /> </center>
 
-### ¿Qué es Bootstrap y para qué sirve?
+### ¿Qué es Bootstrap y para qué sirve?  🤔
 
 Bootstrap es un framework <i>front-end</i> utilizado para desarrollar aplicaciones web y sitios mobile first
 El framework combina CSS y JavaScript para estilizar los elementos de una página HTML. Permite mucho más que, simplemente, cambiar el color de los botones y los enlaces.
@@ -9,11 +9,11 @@ El framework combina CSS y JavaScript para estilizar los elementos de una pág
 Esta es una herramienta que proporciona interactividad en la página, por lo que ofrece una serie de componentes que facilitan la comunicación con el usuario, como menús de navegación, controles de página, barras de progreso y más.
 Además de todas las características que ofrece el framework, su principal objetivo es permitir la <b>construcción de sitios web responsive para dispositivos móviles.</b>
 
-### ¿Por qué usar Bootstrap?
+### ¿Por qué usar Bootstrap? 😯
 
 Bootstrap facilita herramientas para crear aplicaciones de forma rápida y sencilla, ya que se apoya en una librería de componentes ya creados y optimizados para el entorno web con la ventaja de estar pensados para ser responsive. 
 
-### Características de Bootstrap
+### Características de Bootstrap 😃
 
 Bootstrap está constituido por una serie de archivos CSS y JavaScript responsables de asignar características específicas a los elementos de la página.
 
@@ -23,8 +23,8 @@ Hay un archivo principal llamado bootstrap.css, que contiene una definición par
 
 Para asignarle una característica a un elemento, simplemente debemos informar la clase correspondiente en la propiedad “class” del elemento que será estilizado
 
-### Ventajas y desventajas de usar bootstrap
-Ventajas: 
+### Ventajas y desventajas de usar bootstrap 🧐
+🟩🟩🟩🟩🟩Ventajas🟩🟩🟩🟩🟩
 
 * Puedes diseñar una web jugando con sus elementos compuestos por diferentes combinaciones de HTML, CSS y Javascript.
 * Utiliza HTML5, CSS3, jQuery o GitHub, entre otros.
@@ -35,14 +35,14 @@ Ventajas:
 * Cuenta con una documentación completa que te puede sacar de apuros rápidamente.
 * Facilita enormemente el diseño de interfaces y además incluye por defecto una plantilla bastante optimizada.
 
-Desventajas:
+🟥🟥🟥🟥🟥Desventajas🟥🟥🟥🟥🟥
 
 * Se recomienda trabajar con Bootstrap desde el inicio de un proyecto, ya que si quieres incluir el framework en un trabajo ya iniciado algunos estilos podrían “romperse” y se tendría que ajustar a como se tenia en un principio.
 * Es complicado, cambiar de versión si has realizado modificaciones profundas, pues se pueden perder estilos.
 * No es ligero, y además, para algunas funcionalidades, será necesario tener que usar Javascript y jQuery.
 * Debes adaptar tu diseño a un grid de 12 columnas, que se modifican según el dispositivo. Aquí empiezan los problemas, Bootstrap por defecto te trae anchos, márgenes y altos de línea, y realizar cambios específicos.
 
-### Como instalar o implementar bootstrap en un proyecto
+### Como instalar o implementar bootstrap en un proyecto ⚙️
 
 Hay diferentes formas de configurarlo o estructurarlo para usarlo en una aplicación web. Sin embargo, para que funcione correctamente, es necesario agregar las bibliotecas JQuery y Popper.js, necesarias para la ejecución de algunos componentes de Bootstrap.
 
@@ -75,7 +75,7 @@ A continuación, puedes ver el código de una página HTML con todas las referen
 <Fuente: Getbootstrap.com>
 
 
-### ¿Se puede implementar responsive con Bootstrap? 
+### ¿Se puede implementar responsive con Bootstrap?  💭
 
 Para implementar diseños responses el framework funciona con:
 * la estilización del elemento < div >;
@@ -92,7 +92,7 @@ Básicamente, o framework funciona con tres tipos de containers:
 
 <center><img src="https://i.imgur.com/8xofjtA.gif" height="200" /></center>
 
-### ¿Que es un componente de bootstrap?
+### ¿Que es un componente de bootstrap? 🕵️
 
 Un componente de bootstrap se trata de un código estilizado y reutilizable  para proporcionar una buena experiencia de usuario e interacciones de usuario en una página web como barras de navegación, ventanas emergentes, menús desplegables, iconos, botones, formularios prediseñados y también opciones de tamaño para diferentes elementos DOM.
 
@@ -121,9 +121,9 @@ Por ejemplo las tarjetas:
 
 
 ### ¿Hay muchos tipos de diseños en Bootstrap? 
+(Pendiente)
 
-
-### ¿Cuáles son los diferentes tipos de botones en bootstrap?
+### ¿Cuáles son los diferentes tipos de botones en bootstrap? ✏️
 
 <center><img src="https://i.imgur.com/qI5aCxm.png" /></center>
 
@@ -164,7 +164,7 @@ Puede usar la clase "enlace" si desea restar énfasis a la apariencia de un bot�
 <button type="button" class="btn btn-dark">Dark</button>
 <button type="button" class="btn btn-link">Link</button>
 ```
-### ¿Que es un Carousel de bootstrap?
+### ¿Que es un Carousel de bootstrap? 🔍
 
 Un componente ampliamente utilizado en Bootstrap es el Carrusel, una presentación de diapositivas, es decir, una herramienta que permite la visualización de imágenes de manera receptiva.
 
@@ -174,7 +174,7 @@ También permite la inclusión de efectos especiales para la transición de imá
 <center><img src="https://i.imgur.com/ntfo1ta.gif" height ="200"/></center>
 
 
-### ¿Que es un spinner de bootstrap? 
+### ¿Que es un spinner de bootstrap?  ❓
 El Spinner o indicador de carga es un feedback visual para el usuario de que un proceso está cargando. En muchas ocasiones hay procesos que pueden tardar algo de tiempo en llevarse a cabo: la carga de una parte de la página o incluso de la página entera. En estos casos, para que el usuario tenga la sensación de que algo está funcionando y que debe esperar, lo normal es proporcionar algún tipo de feedback visual con una animación. 
 
 Existen dos tipos de spinners que generan dos tipos de animaciones diferentes:
@@ -184,7 +184,7 @@ Existen dos tipos de spinners que generan dos tipos de animaciones diferentes:
 * El  punto creciente: que utiliza un punto que aparece poco a poco creciendo desde la nada
 <center><img src="https://i.imgur.com/mLMAgqW.gif"></center>
 
-### ¿Que es un navBar de bootstrap?
+### ¿Que es un navBar de bootstrap?⚜️
 La NavBar (barra de navegación), que permite la construcción de un sistema de navegación sensible.
 
 Es posible configurar diferentes formas de presentar el menú, elegir entre posicionamiento lateral o superior y, también, definir una forma de visualización que se pueda extender o contraer.
@@ -195,7 +195,7 @@ También es posible determinar cómo mostrar los enlaces del menú para facilita
 <center><img src="https://i.imgur.com/W8VE7Ht.png"></center>
 
 
-### ¿Que es un modal de bootstrap?
+### ¿Que es un modal de bootstrap? 📢
 
 Los modales, también llamados lightboxs o cuadros de dialogo son usados para mostrar información adicional a la que hay en la pantalla principal de la web.
 En muchas ocasiones tienen mensajes de confirmación como cuando se va a eliminar un registro, abren imágenes en mayor tamaño, pueden tener formularios de contacto y muchos más usos.
@@ -207,10 +207,9 @@ Los modales necesitan tener una llamada a la acción que los invoque, generalmen
 
 ### ¿Existen inputs para subir archivos en Bootstrap?
 
+(Pendiente)
 
-<center><img src="https://i.imgur.com/5Qt5hcZ.png" height="200"></center>
-
-### ¿Qué es un plugin scrollspy en Bootstrap?
+### ¿Qué es un plugin scrollspy en Bootstrap?🔜
 El plug-in Scrollspy se utiliza para actualizar automáticamente los enlaces en una lista de navegación basada en la posición de desplazamiento.
 
 Valores de los atributos:
