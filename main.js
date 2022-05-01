@@ -7,7 +7,7 @@ const getPass1=document.querySelector('#password')
 const getPass2=document.querySelector('#password2')
 const btn=document.querySelector('#form')
 // console.log(btn)
-const containerUsers=document.querySelector('#all-users')
+
 
 //Constantes para recoger los mensajes de error con bootstrap
 const blankName = document.getElementById('name-alert-empty');
@@ -41,40 +41,13 @@ function getUser(e){
       };
 
     console.log(`Nuevo usuario — Nombre: ${userFields.name}, correo:${userFields.email}`);
+
     users.push(userFields);
     localStorage.setItem("users", JSON.stringify(users));
     //Línea añadida para guardarlo en localStorage
-    console.log("Usuarios recogidos", users);
-
-    containerUsers.innerHTML = ``;
-    printUsers()
 
 };
 
-function printUsers(){
-    console.log("holi caracoli")
-    let dataUser = JSON.parse(localStorage.getItem("users"));
-    console.log(dataUser)
-   
-  
-//   for(let i = 0; i < infoUser.length; i++){
-  
-//     containerUsers.innerHTML+= `
-                        
-//                         <div class="card">
-//                           <div class="card-body">
-//                             <h5 class="card-title"> 
-//                                 ${infoUser[i].name}</h5>
-//                             <p class="card-text">
-//                                 ${infoUser[i].email}
-//                             </p>
-//                           </div>
-//                         </div>
-//                           `
-                          
-                
-//   }
-}
 
 
 //Validación de la información del formulario.
@@ -229,11 +202,13 @@ btn.addEventListener('submit', function (e) {
     getUser(e);//En este caso la función a realizar es guardar la información del usuario en la array de usuarios
     showAndHide(signUpSuccesful);  
     setTimeout(function() {showAndHide(signUpSuccesful)}, 3000);
-    window.location.assign("http://127.0.0.1:5500/usuarios.html");
+    setTimeout(function() {window.location.assign("http://127.0.0.1:5500/usuarios.html")}, 3000);
+    ;
   }
 });
 
 //Función para validar elementos sobre la marcha y no esperar a que el usuario de submit
+
 btn.addEventListener('input', function (e) {
   switch (e.target.id) {
       case 'name':
