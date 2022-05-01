@@ -9,7 +9,7 @@ En este proyecto colaborativo, [Fran PD](https://github.com/franpd8) y [Gabriel 
 
 #### Páginas en HTML
 
-- [x]  Crear usuario
+- [x]  Formulario para crear usuario
 - [x]  Tarjetas de usuarios
 
 <img src="https://i.imgur.com/HFh5829.png" >
