@@ -9,7 +9,6 @@ En este proyecto colaborativo, [Fran PD](https://github.com/franpd8) y [Gabriel 
 
 #### Páginas en HTML
 
-- [x]  Barra de Navegación
 - [x]  Formulario
 - [x]  Tarjeta de usuarios
 
@@ -17,8 +16,8 @@ En este proyecto colaborativo, [Fran PD](https://github.com/franpd8) y [Gabriel 
 
 #### Estilizar CSS
 
-Utilizando componentes de Bootstrap podemos estilizar la barra de navegación y el formulario de modo que el diseño sea responsive y se adapte a los disferentes dispositivos.  Usamos contenedores fluidos y cards ajustadas en rejilla.
+Utilizando componentes de Bootstrap hemos estilizado la barra de navegación y el formulario de modo que el diseño sea responsive y se adapte a los disferentes dispositivos.  Usamos contenedores fluidos y cards ajustadas en rejilla.
 
 #### Funciones con Javascript.
 
-
+Hemos dividido las funciones entre acciones simples y acciones más complejas, haciendo así el código más limpio y legible. Para verificar la página hemos añadido un montón de eventListeners y RegEx (Regular expressions o expressiones regulares). También hemos creado funciones para almacenar toda la info en el localStorage y procesarla desde ahí. 
