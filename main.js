@@ -1,13 +1,9 @@
-// alert("ey")
-
-// recoger datos del usuario
+// Recoger datos del usuario
 const getName= document.querySelector('#name')
 const getEmail=document.querySelector('#email')
 const getPass1=document.querySelector('#password')
 const getPass2=document.querySelector('#password2')
 const btn=document.querySelector('#form')
-// console.log(btn)
-
 
 //Constantes para recoger los mensajes de error con bootstrap
 const blankName = document.getElementById('name-alert-empty');
@@ -26,29 +22,21 @@ const signUpSuccesful = document.getElementById('form-success');
 let users =[]
 
 // evento para recoger informacion
-
 //btn.addEventListener('submit', getUser); Añadido en la función de validar toda la información para guardar los datos ya validados.
 
-// funcion para coger datos
+// Funcion para coger datos
 function getUser(e){
     e.preventDefault()
-
     let userFields = {
         name: getName.value,
         email: getEmail.value,
         password1: getPass1.value,
         password2: getPass2.value
       };
-
     console.log(`Nuevo usuario — Nombre: ${userFields.name}, correo:${userFields.email}`);
-
     users.push(userFields);
-    localStorage.setItem("users", JSON.stringify(users));
-    //Línea añadida para guardarlo en localStorage
-
+    localStorage.setItem("users", JSON.stringify(users));//Línea añadida para guardarlo en localStorage
 };
-
-
 
 //Validación de la información del formulario.
 
@@ -110,12 +98,10 @@ const checkUsername = () => {
       //showError(getName, 'Name cannot be blank.');
       showAndHide(blankName);
       setTimeout(function() {showAndHide(blankName)}, 3000);
-      console.log("this is blank name inside checkusername function"+blankName);
   } else if (!isBetween(username.length, min, max)) {
       //showError(getName, `Name must be between ${min} and ${max} characters`);
       showAndHide(wrongName);
       setTimeout(function() {showAndHide(wrongName)}, 3000);
-      console.log("this is wrong name inside checkusername function"+wrongName);
   } else {
       showSuccess(getName);
       valid = true;
@@ -157,8 +143,7 @@ const checkPassword = () => {
       showAndHide(wrongPassword);
       setTimeout(function() {showAndHide(wrongPassword)}, 3000);
   } else {
-      showSuccess(getPass1);
-      
+      showSuccess(getPass1);   
       valid = true;
   }
   return valid;
@@ -208,7 +193,6 @@ btn.addEventListener('submit', function (e) {
 });
 
 //Función para validar elementos sobre la marcha y no esperar a que el usuario de submit
-
 btn.addEventListener('input', function (e) {
   switch (e.target.id) {
       case 'name':
