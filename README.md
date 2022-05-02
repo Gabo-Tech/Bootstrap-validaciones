@@ -1,6 +1,6 @@
 # Bootstrap y Validaciones
 
-En este proyecto colaborativo, [Fran PD](https://github.com/franpd8) y [Gabriel Clemente](https://github.com/gabriel19971029), han desarrollado una investigación inicial sobre [Bootstrap](https://getbootstrap.com/) para crear después un formulario que obtenga y muestre datos del usuario.
+En este proyecto colaborativo, [Fran PD](https://github.com/franpd8) y [Gabriel Clemente](https://github.com/gabriel19971029), han desarrollado una investigación inicial sobre [Bootstrap](https://getbootstrap.com/) para crear después un formulario que obtenga y muestre datos del usuario. Para ver el formulario online visite el [formulario](https://gabriel19971029.github.io/Bootstrap-validaciones/).
 
 ## Ejercicio práctico.
 - Crear páginas en Html con Bootstrap

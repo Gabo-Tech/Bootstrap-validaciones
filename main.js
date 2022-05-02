@@ -19,9 +19,10 @@ const wrongPassword2 = document.getElementById('password2-alert-wrong');
 const signUpSuccesful = document.getElementById('form-success');
 
 //Array para almacenar toda la info de los usuarios o array de usuarios. 
-let users =[]
 
-// evento para recoger informacion
+let users = JSON.parse(localStorage.getItem('users')) || [];
+
+// evento para recoger informacion obsoleto 
 //btn.addEventListener('submit', getUser); Añadido en la función de validar toda la información para guardar los datos ya validados.
 
 // Funcion para coger datos
